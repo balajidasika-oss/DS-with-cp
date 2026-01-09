@@ -1,3 +1,4 @@
+// Online Java Compiler
 
 class Node{
     int data;
@@ -18,8 +19,12 @@ class Node{
 class Main {
     public static void main(String[] args) {
         Node a = new Node(70);
+        Node b = new Node(30);
        a.getData();
        a.getNext();
        System.out.println(a);
+        b.getData();
+       b.getNext();
+       System.out.println(b);
     }
 }
