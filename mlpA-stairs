@@ -1,0 +1,31 @@
+total_stairs = 12
+position = 0
+cycle = 0
+steps_taken = 0
+
+while position < total_stairs:
+    cycle += 1
+
+    # Climb 3 stairs
+    climb = min(3, total_stairs - position)
+    position += climb
+    steps_taken += climb
+
+    print(f"Cycle {cycle}: Climbed {climb} stairs -> Position = {position}")
+
+    # Check if destination reached
+    if position >= total_stairs:
+        print(f"\nReached the 2nd floor!")
+        break
+
+    # Slip back 1 stair
+    position -= 1
+    steps_taken += 1
+
+    print(f"Cycle {cycle}: Slipped back 1 stair -> Position = {position}")
+
+print("\n----- Result -----")
+print(f"Total stairs to reach floor : {total_stairs}")
+print(f"Cycles completed            : {cycle}")
+print(f"Final position              : {position}")
+print(f"Total steps walked          : {steps_taken}")
